@@ -32,7 +32,11 @@ app.get('/',function(req,res){
 
 app.post('/api/photo',function(req,res){
   if(done==true){
-    var file_path = req.files.userPhoto.path;
+    //console.log("REQUEST: " + JSON.stringify(req.files.file.path));
+    //change URL below to the one above
+    // var file_path = req.files.userPhoto.path;
+    console.log("Recieve OCR request, now running...");
+    var file_path = req.files.file.path;
     tesseract.process(file_path, function(err, text) {
        if(err) {
          res.send('ERR');
@@ -42,7 +46,9 @@ app.post('/api/photo',function(req,res){
          var uresults = _.uniq(result);
          res.header("Access-Control-Allow-Origin", "*");
          res.header("Access-Control-Allow-Headers", "X-Requested-With");
+         console.log("about to submit back to requester")
          res.jsonp(uresults);
+         console.log("submitted back to requester");
        }
     });
   }
