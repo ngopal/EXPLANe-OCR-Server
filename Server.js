@@ -54,7 +54,7 @@ app.post('/api/photo',function(req,res){
   }
 });
 
-
-app.listen(8080,function(){
-    console.log("Working on port 3000");
+var heroku_port = process.env.PORT;
+app.listen(heroku_port,function(){
+    console.log("Working on port "+heroku_port);
 });
