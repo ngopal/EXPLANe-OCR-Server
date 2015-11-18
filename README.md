@@ -19,3 +19,5 @@ Send post requests to http://yourservice.com/api/photo. This url can be modified
 heroku git:remote -a lit-reef-9299 (replace with your app name)
 heroku buildpacks:set heroku/nodejs
 heroku buildpacks:add https://github.com/matteotiziano/heroku-buildpack-tesseract
+heroku ps:scale web=1
+
