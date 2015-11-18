@@ -17,5 +17,5 @@ How to use the API
 Send post requests to http://yourservice.com/api/photo. This url can be modified in Server.js. 
 
 heroku git:remote -a lit-reef-9299 (replace with your app name)
-heroku config:set BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi
-heroku buildpacks:set https://github.com/ddollar/heroku-buildpack-multi
+heroku buildpacks:set heroku/nodejs
+heroku buildpacks:add https://github.com/matteotiziano/heroku-buildpack-tesseract
