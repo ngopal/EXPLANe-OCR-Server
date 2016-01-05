@@ -41,13 +41,20 @@ app.post('/api/photo',function(req,res){
        if(err) {
          res.send('ERR');
        } else {
-         var re = /rs\d+/gi;
-         var result = text.toLowerCase().match(re);
-         var uresults = _.uniq(result);
+
+         // Regular expression for RSID
+         console.log("RSID regex step");
+         var uresults = findRSIDs(text);
+
+         //Regular expression for URL
+         console.log("URL regex step");
+         var uresults2 = findURLs(text);
+
          res.header("Access-Control-Allow-Origin", "*");
          res.header("Access-Control-Allow-Headers", "X-Requested-With");
          console.log("about to submit back to requester")
-         res.jsonp(uresults);
+         res.jsonp({ rsid: uresults,
+                     url:  uresults2 });
          console.log("submitted back to requester");
        }
     });
@@ -58,3 +65,17 @@ var heroku_port = process.env.PORT;
 app.listen(heroku_port,function(){
     console.log("Working on port "+heroku_port);
 });
+
+function findURLs(content) {
+    var URLreg = new RegExp("https?:\/\/(?:www\.|(?!www))[^\s\.]+\.[^\s]{2,}|www\.[^\s]+\.[^\s]{2,}");
+    var url_matches = content.match(URLreg);
+    var unique_url_matches = _.uniq(url_matches);
+    return unique_url_matches;
+}
+
+function findRSIDs(content) {
+    var re = /rs\d+/gi;
+    var result = content.toLowerCase().match(re);
+    var uresults = _.uniq(result);
+    return uresults;
+}
