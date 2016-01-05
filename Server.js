@@ -52,7 +52,7 @@ app.post('/api/photo',function(req,res){
 
          res.header("Access-Control-Allow-Origin", "*");
          res.header("Access-Control-Allow-Headers", "X-Requested-With");
-         console.log("about to submit back to requester")
+         console.log("about to submit back to requester");
          res.jsonp({ rsid: uresults,
                      url:  uresults2 });
          console.log("submitted back to requester");
