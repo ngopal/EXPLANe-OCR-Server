@@ -1,0 +1,38 @@
+[2016-02-24T22:53:22.367Z] (sys) Starting
+Working on port 3000
+
+/opt/tesseract-OCR-javascript/node_modules/multer/index.js:24
+  mkdirp(dest, function(err) { if (err) throw err; });
+                                              ^
+Error: EACCES, mkdir '/uploads'
+[2016-02-24T22:54:56.233Z] (sys) Starting
+Working on port 3000
+
+/opt/tesseract-OCR-javascript/node_modules/multer/index.js:24
+  mkdirp(dest, function(err) { if (err) throw err; });
+                                              ^
+Error: EACCES, mkdir '/uploads'
+[2016-02-24T22:56:12.598Z] (sys) Starting
+Working on port 3000
+
+/opt/tesseract-OCR-javascript/node_modules/multer/index.js:24
+  mkdirp(dest, function(err) { if (err) throw err; });
+                                              ^
+Error: EEXIST, mkdir '/opt/tesseract-OCR-javascript/uploads'
+[2016-02-24T22:56:35.049Z] (sys) Starting
+Working on port 3000
+Wed, 24 Feb 2016 22:56:46 GMT express deprecated res.sendfile: Use res.sendFile instead at opt/tesseract-OCR-javascript/Server.js:30:11
+Error: ENOENT, stat '/index.html'
+[2016-02-24T22:58:00.231Z] (sys) Stopping
+[2016-02-24T22:58:02.150Z] (sys) Starting
+/opt/tesseract-OCR-javascript
+Working on port 3000
+Wed, 24 Feb 2016 22:58:17 GMT express deprecated res.sendfile: Use res.sendFile instead at Server.js:30:11
+[2016-02-24T23:00:57.906Z] (sys) Stopping
+[2016-02-24T23:01:24.022Z] (sys) Starting
+/opt/tesseract-OCR-javascript
+Working on port 3000
+[2016-02-24T23:01:26.539Z] (sys) Stopping
+[2016-02-24T23:01:26.564Z] (sys) Starting
+/opt/tesseract-OCR-javascript
+Working on port 3000

@@ -13,7 +13,7 @@ app.all('/', function(req, res, next) {
   next();
  });
 
-app.use(multer({ dest: './uploads/',
+app.use(multer({ dest: '/opt/tesseract-OCR-javascript/uploads/',
  rename: function (fieldname, filename) {
     return filename+Date.now();
   },
