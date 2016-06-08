@@ -139,3 +139,11 @@ function findRSIDs(content) {
     var uresults = _.compact(uresults);
     return uresults;
 }
+
+// Use this 'findRSID' function if the tesseract install uses all language packs
+//function findRSIDs(content) {
+//    var re = /rs\d+/gi;
+//    var result = content.toLowerCase().match(re);
+//    var uresults = _.uniq(result);
+//    return uresults;
+//}
